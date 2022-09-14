@@ -19,6 +19,10 @@ function allShows(){
 function alphabetical(e){
     const letter = e.target.value
     const filteredShows = show.filter(individualShow => individualShow.name.startsWith(letter))
-    console.log(filteredShows)
-}
-
+    filteredShows.forEach(show => {
+        console.log(show)
+        const li = document.createElement('li')
+        li.innerHTML = show.name
+        listedShows.append(li)
+        })
+    }
