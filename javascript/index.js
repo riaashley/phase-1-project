@@ -4,18 +4,21 @@ const listedShows = document.getElementById('listed-shows')
 showsDropdown.addEventListener('change', alphabetical)
 
 allShows()
-
+let show
 
 //Collect list of Show Names
 function allShows(){
     fetch('https://api.tvmaze.com/shows')
     .then(resp => resp.json())
-    .then(data => console.log('data', data))
+    .then(data => {
+        show = data
+    })
 }
 
 //Grab value in dropdown
 function alphabetical(e){
-    console.log(e)
     const letter = e.target.value
-    console.log(letter)
+    const filteredShows = show.filter(individualShow => individualShow.name.startsWith(letter))
+    console.log(filteredShows)
 }
+
