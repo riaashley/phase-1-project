@@ -24,5 +24,9 @@ function alphabetical(e){
         const li = document.createElement('li')
         li.innerHTML = show.name
         listedShows.append(li)
+        const img = document.createElement('img')
+        img.src = show.img.original
+        console.log(img)
+        listedShows.append(li)
         })
     }
