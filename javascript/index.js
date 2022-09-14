@@ -25,8 +25,10 @@ function alphabetical(e){
         li.innerHTML = show.name
         listedShows.append(li)
         const img = document.createElement('img')
-        img.src = show.img.original
-        console.log(img)
+        img.src = show.image.original
+        const p = document.createElement('p')
+        p.innerHTML = show.summary
+        li.append(img, p)
         listedShows.append(li)
         })
     }
