@@ -15,7 +15,7 @@ function allShows(){
     })
 }
 
-//Grab value in dropdown
+//Grab value in dropdown and attach details
 function alphabetical(e){
     const letter = e.target.value
     const filteredShows = show.filter(individualShow => individualShow.name.startsWith(letter))
@@ -26,6 +26,7 @@ function alphabetical(e){
         listedShows.append(li)
         const img = document.createElement('img')
         img.src = show.image.original
+        img.style.height = '7rem'
         const p = document.createElement('p')
         p.innerHTML = show.summary
         li.append(img, p)
