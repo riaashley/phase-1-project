@@ -1,7 +1,9 @@
 const showsDropdown = document.getElementById('shows-dropdown')
 const listedShows = document.getElementById('listed-shows')
+const randomButton = document.getElementById('random')
 
 showsDropdown.addEventListener('change', alphabetical)
+randomButton.addEventListener('click', randomShow)
 
 allShows()
 let show
@@ -33,3 +35,9 @@ function alphabetical(e){
         listedShows.append(li)
         })
     }
+
+    //Grab value for submit button and attach random show
+  function randomShow(x){
+    console.log(x)
+  }
+    
