@@ -37,7 +37,8 @@ function alphabetical(e){
     }
 
     //Grab value for submit button and attach random show
-  function randomShow(x){
-    console.log(x)
+  function randomShow(){
+    const newShow = show[Math.floor(Math.random() * 240)]
+    console.log(newShow)
   }
     
