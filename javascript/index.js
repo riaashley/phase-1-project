@@ -1,6 +1,7 @@
 const showsDropdown = document.getElementById('shows-dropdown')
 const listedShows = document.getElementById('listed-shows')
 const randomButton = document.getElementById('random')
+const randomListed = document.getElementById('random-show')
 
 showsDropdown.addEventListener('change', alphabetical)
 randomButton.addEventListener('click', randomShow)
@@ -40,5 +41,13 @@ function alphabetical(e){
   function randomShow(){
     const newShow = show[Math.floor(Math.random() * 240)]
     console.log(newShow)
-  }
-    
+        let li = document.createElement('li')
+        li.innerHTML = newShow.name
+        let img = document.createElement('img')
+        img.src = newShow.image.original
+        img.style.height = '8rem'
+        let p = document.createElement('p')
+        p.innerHTML = newShow.summary
+        li.append(img, p)
+        randomListed.append(li)
+    }
