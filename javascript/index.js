@@ -43,9 +43,14 @@ function eachShow(filteredShows){
     heartButton.innerHTML = emptyHeart
     li.append(img, p, heartButton)
     listedShows.append(li)
+    heartButton.addEventListener("click", likeHeart)
     })
 }
 
+const likeHeart = function(e) {
+    const likes = e.target
+    console.log(likes)
+}
 
     //Grab value for submit button and attach random show
 function randomShow(){
