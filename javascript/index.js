@@ -2,6 +2,8 @@ const showsDropdown = document.getElementById('shows-dropdown')
 const listedShows = document.getElementById('listed-shows')
 const randomButton = document.getElementById('random')
 const randomListed = document.getElementById('random-show')
+const emptyHeart = '♡'
+const fullHeart = '♥'
 
 showsDropdown.addEventListener('change', alphabetical)
 randomButton.addEventListener('click', randomShow)
@@ -37,10 +39,13 @@ function eachShow(filteredShows){
     img.style.height = '7rem'
     const p = document.createElement('p')
     p.innerHTML = show.summary
-    li.append(img, p)
+    const heartButton = document.createElement('button')
+    heartButton.innerHTML = emptyHeart
+    li.append(img, p, heartButton)
     listedShows.append(li)
     })
 }
+
 
     //Grab value for submit button and attach random show
 function randomShow(){
