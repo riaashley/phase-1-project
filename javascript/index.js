@@ -5,6 +5,7 @@ const randomListed = document.getElementById('random-show')
 
 showsDropdown.addEventListener('change', alphabetical)
 randomButton.addEventListener('click', randomShow)
+reset => document.getElementById('form').reset();
 
 allShows()
 let show
