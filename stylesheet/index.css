@@ -29,3 +29,10 @@ p{
     color: white;
     text-align: center;
 }
+
+#results{
+    color: white;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+}
