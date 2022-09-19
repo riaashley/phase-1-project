@@ -49,3 +49,7 @@ button{
 li, p{
     margin: 1em;
 }
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
