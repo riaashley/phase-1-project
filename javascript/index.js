@@ -8,7 +8,7 @@ const fullHeart = '♥'
 
 showsDropdown.addEventListener('change', alphabetical)
 randomButton.addEventListener('click', randomShow)
-title.addEventListener('mouseover', titleLarger)
+title.addEventListener('mouseover', titleColorChange)
 reset => document.getElementById('form').reset();
 
 allShows()
@@ -79,9 +79,9 @@ function addInformation(newShow){
     randomListed.append(li)
     }
 
-function titleLarger(e){
-    e.target.style.color = "red"
+function titleColorChange(e){
+    e.target.style.color = "grey"
     setTimeout(() => {
         e.target.style.color = "white"
-    }, 500)
+    }, 1000)
 }
