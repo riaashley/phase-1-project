@@ -2,11 +2,13 @@ const showsDropdown = document.getElementById('shows-dropdown')
 const listedShows = document.getElementById('listed-shows')
 const randomButton = document.getElementById('random')
 const randomListed = document.getElementById('random-show')
+const title = document.getElementById('title')
 const emptyHeart = '♡'
 const fullHeart = '♥'
 
 showsDropdown.addEventListener('change', alphabetical)
 randomButton.addEventListener('click', randomShow)
+title.addEventListener('mouseover', titleLarger)
 reset => document.getElementById('form').reset();
 
 allShows()
@@ -49,7 +51,13 @@ function eachShow(filteredShows){
 
 const likeHeart = function(e) {
     const likes = e.target
-    console.log(likes)
+    const like = likes.innerHTML
+    if (like===emptyHeart){
+        likes.innerHTML = fullHeart
+    }
+    else{
+        likes.innerHTML = emptyHeart
+    }
 }
 
     //Grab value for submit button and attach random show
@@ -70,3 +78,10 @@ function addInformation(newShow){
     li.append(img, p)
     randomListed.append(li)
     }
+
+function titleLarger(e){
+    e.target.style.color = "red"
+    setTimeout(() => {
+        e.target.style.color = "white"
+    }, 500)
+}
