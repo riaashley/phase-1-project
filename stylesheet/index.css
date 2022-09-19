@@ -46,3 +46,6 @@ button{
     font-size: 12px;
     padding: 0px 10px;
 }
+li, p{
+    margin: 1em;
+}
