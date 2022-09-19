@@ -1,5 +1,5 @@
 # Project Name
-Let's Binge is a Single Page Application that allows the user to find a television show by name.
+Let's Binge Watch is a Single Page Application that allows the user to find a television show. Shows are categorized by their first letter. All appropriate shows will be listed along with the show's image and a brief summary.
 
 ### Requirements
 * have json-server installed
@@ -9,5 +9,9 @@ Let's Binge is a Single Page Application that allows the user to find a televisi
 * Open index.html in browser
 
 ### Features
-* Select show by name using a dropdown menu
+* Select show by first letter using a dropdown menu
+* Shows will have an image and brief description
+* Heart the show if you like it
+* Can't decide what show to watch? Let the website select a random show
+
 
