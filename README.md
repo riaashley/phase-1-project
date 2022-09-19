@@ -13,5 +13,8 @@ Let's Binge Watch is a Single Page Application that allows the user to find a te
 * Shows will have an image and brief description
 * Heart the show if you like it
 * Can't decide what show to watch? Let the website select a random show
+* Place your mouse over the title for a color change
 
-
+### Credit
+* image from pexels.com
+* TV Maze API
